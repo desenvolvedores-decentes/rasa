@@ -1,0 +1,166 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- despedida:
+    use_entities: true
+- saudacao:
+    use_entities: true
+- sobre_tiao:
+    use_entities: true
+- solicita_servico:
+    use_entities: true
+- solicita_descricao_servico:
+    use_entities: true
+- solicita_endereco_servico:
+    use_entities: true
+- solicita_etapas_servico:
+    use_entities: true
+- solicita_link_servico:
+    use_entities: true
+- solicita_horario_servico:
+    use_entities: true
+- listar_servicos_existentes:
+    use_entities: true
+- afirmacao:
+    use_entities: true
+- negacao:
+    use_entities: true
+- nlu_fallback:
+    use_entities: []
+- testando_chatbot:
+    use_entities: true
+- xingamento:
+    use_entities: true
+- tudo_bem:
+    use_entities: true
+entities:
+- servico
+- horario
+- etapas
+- descricao
+- link
+- endereco
+- descrição
+- etapa
+slots:
+  servico:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  horario:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  etapas:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  link:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  endereco:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  descricao:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_sobre_tiao:
+  - text: Meu nome é Tião, que vem de Sebastião, um nome bem legal, não acha?!
+  utter_saudacao:
+  - text: Olá, eu sou o Tião, estou aqui para lhe ajudar a encontrar os serviços da prefeitura de Fortaleza. No que posso te ajudar?
+  utter_confirma_servico:
+  - text: Ah, você quer informações sobre {servico}, confirma?
+  utter_negacao:
+  - text: Opa, desculpa por isso
+  utter_identifica_atributo_hora:
+  - text: Você informou o valor {horario} que indica querer falar de um atributo
+  utter_identifica_atributo_descricao:
+  - text: Você informou o valor {descricao} que indica querer falar de um atributo
+  utter_identifica_atributo_endereco:
+  - text: Você informou o valor {endereco} que indica querer falar de um atributo
+  utter_indetifica_atributo_link:
+  - text: Você informou o valor {link} que indica querer falar de um atributo
+  utter_identifica_atributo_etapas:
+  - text: Você informou o valor {etapas} que indica querer falar de um atributo
+  utter_listar_servicos_existentes:
+  - text: |-
+      Posso te falar sobre os serviços oferecidos pelas secretarias da Prefeitura de Fortaleza: Acessar o Extrato do IPTU; 
+       Saber onde fica a ACM; 
+       Explicar o que é Bolsa Família; 
+       Lhe falar sobre o Recurso ao CETRAN.
+       Qual o serviço do seu interesse?
+       Você também pode encontrar todos os serviços digitais do município de Fortaleza na plataforma do Fortaleza Digital, acessível em: www.fortaleza.ce.gov.br
+  - text: |-
+      Posso falar sobre 
+       Horário, 
+       Detalhes, 
+       Endereço, 
+       Link e 
+       Etapas de alguns serviços da Prefeitura de Fortaleza como por exemplo AMC, Hospital da Mulher, IPTU Dentre outros.
+  utter_ask_endereco_servico_form_servico:
+  - text: Entendi, voce gostaria de saber o {endereco} de qual servico?
+  utter_default:
+  - text: Desculpa, não consegui entender. Você pode refazer a pergunta?
+  utter_ajudei:
+  - text: Essa informação te ajudou?
+  - text: Era isso que você estava procurando?
+  - text: Consegui te ajudar?
+  - text: Me ajude a melhorar, eu te ajudei?
+  utter_estou_em_melhorias:
+  - text: Ok, estou melhorando a cada dia. Obrigado pelo feedback
+  - text: Endendi, estou melhorando a cada dia. Obrigado pelo feedback
+  - text: Desculpe, vou melhorar. Sua resposta é muito importante pra mim
+  - text: Perdão, ainda estou aprendendo. Seu feedback é muito importante. Vou melhorar.
+  utter_despedida:
+  - text: Obrigado. tenha um bom dia.
+  - text: Obrigado. Até a próxima :)
+  - text: Obrigado. Até outro dia.
+  - text: Agradeço, tenha um ótimo dia.
+  utter_tudo_bem:
+  - text: Eu estou muito bem! Fico feliz em ter perguntado!
+  - text: Me sinto renovado, obrigado por perguntar!
+  - text: Estou muito melhor agora que perguntou! Vamos conversar?
+  utter_teste:
+  - text: Teste bem sucedido!! Pronto para lhe ajudar.
+  - text: Tudo funcionando perfeitamente.
+  utter_xingamento:
+  - text: Isso não me parece muito adequado.
+  utter_chavecos:
+  - text: Me desculpe mas você não faz meu tipo.
+  - text: Você merece coisa melhor.
+  - text: Acho que temos objetivos diferentes, sabe.
+  - text: Meu trabalho me consome totalmente.
+  - text: Estou concentrado na minha carreira.
+  - text: Nós vivemos em mundos diferentes, nunca daríamos certo mesmo.
+  - text: Não vai rolar.
+  - text: Não quero nada sério agora.
+  - text: Você é a pessoa certa na hora errada.
+  - text: Minha vida anda muito complicada nesse momento.
+  - text: Não tenho tempo para relacionamento.
+  - text: Você é maravilhoso(a), mas…
+  - text: Tem muita coisa rolando, acho que não da certo.
+  - text: O problema não é você, sou eu.
+actions:
+- action_pesquisa_info_banco
+- action_pesquisa_mais_servico_banco
+forms:
+  endereco_servico_form:
+    required_slots:
+      servico:
+      - entity: servico
+        type: from_entity
+e2e_actions: []

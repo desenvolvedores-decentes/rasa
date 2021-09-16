@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+  app:
+    image: orlasolucoes/actionstiaorasa:latest
+    environment:
+      - URI=mongodb://admin:admin123@chat.orlasolucoes.com.br/
+      - DATABASE=dev
