@@ -1,0 +1,39 @@
+version: "2.0"
+rules:
+- rule: Sempre informar o escopo do bot quando receber uma saudação
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - action: utter_listar_servicos_existentes
+- rule: Pedir para refazer a pergunta quando enviar uma mensagem com baixa confiança de NLU
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+- rule: Listar servicos existentes
+  steps:
+  - intent: listar_servicos_existentes
+  - action: utter_listar_servicos_existentes
+- rule: Tudo bem
+  steps:
+  - intent: tudo_bem
+  - action: utter_tudo_bem
+- rule: Testando Chatbot
+  steps:
+  - intent: testando_chatbot
+  - action: utter_teste
+- rule: Chavecos
+  steps:
+  - intent: chavecos
+  - action: utter_chavecos
+- rule: Sobre Tiao
+  steps:
+  - intent: sobre_tiao
+  - action: utter_sobre_tiao
+- rule: Xingamento
+  steps:
+  - intent: xingamento
+  - action: utter_xingamento
+- rule: Despedida
+  steps:
+  - intent: despedida
+  - action: utter_despedida

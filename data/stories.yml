@@ -1,0 +1,44 @@
+version: "2.0"
+stories:
+- story: caminho_servico
+  steps:
+  - intent: solicita_servico
+  - action: action_pesquisa_info_banco
+  - checkpoint: check_pesquisa_info_banco
+- story: caminho_descricao_servico
+  steps:
+  - intent: solicita_descricao_servico
+  - action: action_pesquisa_info_banco
+  - checkpoint: check_pesquisa_info_banco
+- story: caminho_endereco_servico
+  steps:
+  - intent: solicita_endereco_servico
+  - action: action_pesquisa_info_banco
+  - checkpoint: check_pesquisa_info_banco
+- story: caminho_etapas_servico
+  steps:
+  - intent: solicita_etapas_servico
+  - action: action_pesquisa_info_banco
+  - checkpoint: check_pesquisa_info_banco
+- story: caminho_link_servico
+  steps:
+  - intent: solicita_link_servico
+  - action: action_pesquisa_info_banco
+  - checkpoint: check_pesquisa_info_banco
+- story: caminho_horario_servico
+  steps:
+  - intent: solicita_horario_servico
+  - action: action_pesquisa_info_banco
+  - checkpoint: check_pesquisa_info_banco
+- story: tratar_afirmacao_apos_consulta_banco
+  steps:
+  - checkpoint: check_pesquisa_info_banco
+  - intent: afirmacao
+  - action: utter_despedida
+  - action: action_restart
+- story: tratar_negacao_apos_consulta_banco
+  steps:
+  - checkpoint: check_pesquisa_info_banco
+  - intent: negacao
+  - action: action_pesquisa_mais_servico_banco
+  - action: action_restart

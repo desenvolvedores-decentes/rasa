@@ -1,0 +1,344 @@
+version: "2.0"
+nlu:
+- intent: saudacao
+  examples: |
+    - olá
+    - Bom dia
+    - Boa tarde
+    - Boa noite
+    - Oi
+    - E ai, tudo bom?
+    - E ai meu chapa, sussa?
+    - Olá
+    - olá, tudo bom. Preciso de ajuda
+    - oi
+    - OI
+    - ola
+    - ol
+    - Olá?
+    - eae
+    - Ola
+    - OÁ?
+- intent: tudo_bem
+  examples: |
+    - Olá, tudo bem? Como você ta!?
+    - olá tudo bem?
+    - Olá, tudo bem?
+- intent: sobre_tiao
+  examples: |
+    - Quem é você
+    - De onde você vem?
+    - De onde vem o nome Tião
+    - De onde vem o nome Tião?
+    - De onde vem Tião?
+    - quem é voce?
+    - De onde vem o nome tião?
+    - Quem é tião?
+    - quem é Tião
+    - Você [serve](descricao) [para que](descricao)?
+- intent: afirmacao
+  examples: |
+    - Sim
+    - isso mesmo
+    - correto
+    - hum rum
+    - claro
+    - exato
+    - exatmente
+    - eh isso
+    - ok
+    - sim
+    - comfirmo
+    - já disse que sim
+- intent: solicita_descricao_servico
+  examples: |
+    - [descricao](descricao)
+    - [O que é](descricao) [AMC movel](servico)
+    - [AMC movel](servico) [o que é](descricao)
+    - [Como](descricao) funciona o [vacine já](servico)
+    - [Para que serve](descricao) o [boletim online](servico)
+    - O [hospital da mulher](servico) [para que serve](descricao)
+    - [como](descricao) funciona e qual o [link](link) para [acessar](link) o [vacine já](servico)
+    - [O que é](descricao) [a AMC](servico)?
+    - Qual o [link](link) da [carteirinha de estudante](servico) do meu filho?
+    - o [que é](descricao) isso
+    - [Me fala sobre](descricao) [iptu](servico)
+    - [o que é](descricao) [a AMC](servico)?
+    - [Me fala](descricao) sobre o [IPTU](servico)
+    - [Me fala](descricao) sobre SEUMA
+    - [Me fala](descricao) sobre [a AMC](servico)
+    - [O que é](descricao) o [hospital](servico)
+    - [O que é](descricao) a [ACM](servico)?
+    - [O que é](descricao) a [citinova](servico)?
+    - [Onde](endereco) fica a [citinova](servico)?
+    - [O que é](descricao) a [CITINOVA](servico)
+    - [O que é](descricao) o [IPTU](servico)?
+    - [Me explique](descrição), por favor, o que é [licença para instalação urbanístico- ambiental](servico)
+    - [quero](descricao) denunciar [descarte de lixo](servico)
+    - [O que é](descricao) o [Bolsa familia](servico)
+    - [quero](descricao) meu [iptu](servico)
+    - [quero](descricao) cadastrar [bolsa familia](servico)
+    - [O que é](descricao) a [AMC](servico)
+    - [O que](descricao) é [AMC](servico)
+    - [Me fala](descricao) sobre o [ipm saúde](servico)
+    - O [que é](descricao) o [IPM SAUDE](servico)
+    - [O que é](descricao) o [IPM](servico)
+    - O [que é](descricao) a [seuma](servico)
+    - [COMO](descricao) FAÇO PARA TER O [BOLSA FAMÍLIA](servico)
+    - Quero entrar em contato com a [central 156](servico), [como](descricao) posso [fazer](etapas)?
+    - [o que é](descricao) a [seuma](servico)?
+    - [Me fala com](descricao) sobre o [IPTU](servico)
+    - [Me fala](descricao) o [que é](descricao) esse [bolsa familia](servico)
+    - O [que é](descricao) o [vacine já](servico)
+    - O [que é](descricao) o [vacine já](servico)?
+    - O [que é](descricao) o programa [vacine já](servico)?
+    - [como faço](descricao) para me cadastrar?
+    - Me [fale](descricao) sobre o [hospital da mulher](servico)
+    - O [que é](descricao) o serviço [vacine já](servico)?
+    - eu quero [informações](descricao) sobre [bolsa familia](servico)
+    - [O que](descricao) é [Academia enem](servico)?
+- intent: solicita_endereco_servico
+  examples: |
+    - [Onde](endereco) fica a [AMC](servico)?
+    - [Onde](endereco) eu posso tirar a minha [licensa ambiental](servico)?
+    - a [central da AMC](servico) fica [aonde](endereco)
+    - Como faz [para chegar](endereco) na [SEUMA](servico)?
+    - [onde](endereco) fica [a AMC](servico)
+    - Qual o [endereço](endereco) da [AMC](servico)?
+    - Qual o [endereço](endereco) do [vacine já](servico)
+    - Qual o [endereco](endereco) da [AMC](servico)?
+    - Qual o [endereco](endereco) do [hospital da mulher](servico)?
+    - Qual [endereco](endereco) da [AMC](servico)?
+    - [onde](endereco) fica [a amc](servico)?
+    - Qual o endereço da [AMC](servico)?
+    - Qual o endereço do [vacine já](servico)
+    - [Local](endereco) dos [postos de saúde](servico)
+    - [Onde](endereco) encontro postos de [vacinação](servico)?
+    - Qual o [endereço](endereco)?
+    - Qual [endereço](endereco) do [hospital da mulher](servico)?
+    - qual o [endereco](endereco) do [hospital da mulher](servico)?
+    - [Bibliotecas públicas municipais](servico) [onde](endereco) posso encontrar?
+    - [Onde fica](endereco) o [posto de saude](servico) mais próximo?
+    - Consegue me dizer [onde é](endereco) o [hospital](servico) mais proximo, meu amigo?!
+    - Qual o [endereço](endereco) do [hospital](servico)?!
+    - Eu quero saber [onde fica](endereco) o [hospital](servico)!!!
+    - Eu quero o [endereço](endereco) da [ACM](servico)
+    - Quero o [endereço](endereco) da [ACM](servico)
+    - [onde](endereco) fica a sede [da prefeitura](servico)?
+    - [Onde](endereco) fica a [denuncia virtual](servico)
+    - [onde](endereco) fica [amc](servico)
+    - qual o [endereço](endereco) da [AMC](servico)?
+    - [Onde](endereco) fica o [hospital](servico) mais proximo?
+    - qual o [endereco](endereco) da [AMC](servico)?
+    - qual [endereco](endereco) da [AMC](servico)?
+    - quais os [endereços](endereco) das [UPAS](servico) de fortaleza?
+    - [onde](endereco) eu encontro um centro de atenção [psicossocial](servico)?
+    - [endereco](endereco)
+    - Qual a [localização](endereco) [da AMC](servico)?
+    - Qual o [horario](horario) e [endereço](endereco) da [AMC](servico)?
+    - ok, quero [saber](endereco) sobre meu [IPTU](servico)
+- intent: solicita_etapas_servico
+  examples: |
+    - [Passo a passo](etapas) para emissão de [carteirinha de estudante](servico)
+    - [Quais os passos](etapas) para consultar o [IPTU](servico)
+    - Para tirar o [bilhete unico](servico) o que [preciso fazer](etapas)
+    - quero [fazer](etapas) meu [cadastro unico](servico)
+    - [Solicitação de remissão](servico) pode me dizer o [processo para](etapas) para conseguir
+    - quero [fazer](etapas) minha [carteira de estudante](servico)
+    - Para tirar o meu [Habitafor] o que eu [preciso levar](etapa)?
+    - quero [fazer](etapas) meu cadastro no [bolsa familia](servico)
+    - quero [fazer](etapas) o cadastro no [bolsa família](servico)
+    - [como](etapas) faço para [fazer](etapas) meu [bilhete único](servico)?
+    - Quero [saber](etapas) como tiro a minha [carteira de estudante](servico)
+    - [etapas](etapas)
+- intent: solicita_link_servico
+  examples: |
+    - Qual o [link](link) para acessar a [academia Enem](servico)
+    - Como faz uma [denúncia virtual](servico) na [internet](link)
+    - Como [acessar](link) o serviço de [Alvará de construção](servico)
+    - Qual [link](link) para [acessar](link) o [vacine já](servico)
+    - Qual o [link](link) para [acessar a](link) [AMC](servico)?
+    - qual o [link](link) do [AMC](servico)?
+    - qual o [link](link)?
+    - Gostaria do [link](link) para pegar o [Extrato IPTU](servico)
+    - Eu quero [emitir](link) um [alvará de construção](servico)
+    - qual o [link](link) do [hospital da mulher](servico)?
+    - qual o [horario](horario) e o [link](link) do [hospital da mulher](servico)?
+    - e o [link](link)?
+    - qual o [link](link) e o [horario](horario) do [hospital da mulher](servico)?
+    - [acessar](link) o [iptu](servico)
+    - [Acessar](link) o extrato do [iptu](servico)
+    - quero [acessar](link) a [academia enem](servico)
+    - [link](link) [amc](servico)
+    - Qual o [link](link) da [denuncia virtual](servico)
+    - Qual o [link](link) do [IPTU](servico)
+    - Qual o [link](link) do [IPTU](servico)?
+    - Qual o [link](link) para [acessar](link) meu [IPTU](servico)?
+    - Qual o [site](link) posso fazer uma denuncia de possiveis casos de dengue no [denúncia agefis](servico)
+    - como faço para [emitir](link) um [alvará de construção](servico)?
+    - [link](link)
+    - qual o [link](link)
+    - qual o [link](link) da [AMC](servico)?
+    - [Quero emitir](link) meu [IPTU](servico)
+    - como faço para ter [aceso](link) a [academia enem](servico)
+- intent: solicita_horario_servico
+  examples: |
+    - Qual o [horario](horario) de funciona da [central 156](servico)
+    - A partir de que [horas](horario) posso ver minha [frequencia online](servico)
+    - O [fale com a SEUMA](servico) funciona a partir de que [horas](horario?
+    - Que [horas](horario) funciona a [academia enem](servico)
+    - Que [horas](horario) funciona [a AMC](servico)?
+    - Qual o [horário](horario) de funcionamento da [academia enem](servico)?
+    - Que [horas](horario) posso ir no [ipm](servico)?
+    - Qual o [horario](horario) e endereço da [AMC](servico)?
+    - Em que [horario](horario) o [projeto visão nas mãos](servico) está disponivel para visitas?
+    - [horários](horario) de onibus
+    - qual [horas](horario) funciona [a AMC](servico)?
+    - Que [horas](horario) funciona?
+    - [horario](horario)
+    - qual [horario](horario)
+- intent: solicita_servico
+  examples: |
+    - [Extrato IPTU](servico)
+    - [Consultar Comparativo IPTU](servico)
+    - [Isenção de IPTU e ITBI](servico)
+    - [enem](servico)
+    - [iptu](servico)
+    - [seuma](servico)
+    - [amc](servico)
+    - quero tirar minha [carteira de estudante](servico)
+    - quero pagar meu [iptu](servico)
+    - quero reparo na [iluminação](servico)
+    - preciso pegar o meu [iptu](servico)
+    - Preciso pagar o meu [iptu](servico)
+    - [linhas de onibus](servico)
+    - [transporte escolar](servico)
+    - [Bolsa familia](servico)
+    - [bilhete único](servico)
+    - Atualização cadastral [carteira de estudante](servico)
+    - [hospital da mulher](servico)
+    - [AMC](servico)?
+    - O endereço do [posto de saude](servico)!
+    - [Hospital](servico)
+    - Qual o [posto de saude](servico) mais proximo?!
+    - [divida ativa da união](servico)
+    - não, [transporte escolar](servico)
+    - [IPTU](servico)
+    - [Posto de saúdes](servico)
+    - [postos de saúde](servico)
+    - [hospitais](servico)
+    - [descarte de lixo](servico)
+    - certo, quero também cadastrar meu [bilhete unico](servico)
+    - olá, quero cadastrar meu [bilhete unico](servico)
+    - [carteira de estudante](servico)
+    - Preciso de ajuda com meu [IPTU](servico)
+    - imprimir o [iptu](servico)
+    - extrato do [iptu](servico)
+    - Quero pagar o meu [iptu](servico)
+    - pagar o [iptu](servico)
+    - Quero ver meu extrato do [IPTU](servico)
+    - e sobre a [frequencia online](servico)?
+    - [alvará de construção](servico)
+    - quero emtir um [alvara de construcao](servico)
+    - [Central 156](servico)
+    - Verificar [multas AMC](servico)
+    - eu quero agendar um atendimento para a [ETUFOR](servico)
+    - Eu quero emitir meu boleto do [IPTU](servico)
+    - emissão de boleto [IPTU](servico)
+    - [nota fiscal eletronica](servico)
+    - cancelamento de [nota fiscal eletronica](servico)
+    - como posso emitir uma [nota fiscal](servico) de serviço no site da secretaria de finanças?
+    - emitir [IPTU](servico)
+    - [AMC](servico)
+    - O que é a [denuncia virtual](servico)
+    - [vacine já](servico)
+    - [Vacine já](servico)
+    - Que [horas](horario) funciona o [hospital da mulher](servico)?
+    - [CAPS](servico)
+    - Emissão de boleto do [IPTU](servico)
+    - quero ver também sobre meu extrato do meu [iptu](servico)
+    - e a [carteira de estudante](servico)?
+    - [finanças](servico)
+- intent: negacao
+  examples: |
+    - Não
+    - n
+    - de forma alguma
+    - isso não
+    - jamais
+    - não deu uma dentro! pelo amor!!!
+    - não
+    - nao
+- intent: testando_chatbot
+  examples: |
+    - teste
+    - Teste
+    - Testando
+    - Teste Citinova
+- intent: listar_servicos_existentes
+  examples: |
+    - Lista os serviços existentes
+    - Você serve para algo?
+    - Responda meu filho!
+    - Lista os serviços da prefeitura
+    - Quais serviços digitais são prestados pela prefeitura
+    - Quais serviços digitais são prestados pela prefeitura?
+    - quais são os serviços?
+    - me ajude
+    - Você pode me ajudar com o que?
+    - servicos
+    - Sobre quais servicos você pode me ajudar?
+    - Sobre quais serviços você pode me ajudar
+    - quais os serviços eu tenho
+    - em quais serviços você pode me ajudar?
+    - [quais](etapas) serviços
+    - serviços
+    - lista os serviços
+    - quais os serviços digitais
+    - listagem de servioçs
+    - informações sobre serviços
+    - Quais os serviços digitais você oferta
+    - O que vc pode fazer?
+- intent: xingamento
+  examples: |
+    - QUE BIXO INUTIL
+    - caramba
+    - Vai se lascar, seu idiota!
+    - fi da puta
+- intent: nlu_fallback
+  examples: |
+    - ljlkhhb
+    - iiii
+    - 00
+    - sfsfsf
+    - [como](descricao) faço para conversar com um atendente
+    - multa de transito
+    - vacina covid
+    - acho legal
+    - qual o telefone?
+    - ?
+- intent: despedida
+  examples: |
+    - Tchau
+    - falou
+    - até mais
+    - até outro dia
+    - flw
+    - saionará
+    - adios
+    - adeus
+    - Au revoir
+    - orrevuá
+- intent: chavecos
+  examples: |
+    - estou apaixonado por voce
+    - estou te amando
+    - estou gostando de vc
+    - eu nunca beijei ninguem pode me beijar
+    - eu te amo
+    - quero muito ficar com vc
+    - quero vc aqui a noite
+    - vai ta ocupado depois do trabalho?
+    - vem ni mim
+    - voce tem namorado?
+    - vamos transar?
