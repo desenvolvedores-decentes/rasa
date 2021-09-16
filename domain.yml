@@ -99,7 +99,7 @@ responses:
   utter_listar_servicos_existentes:
   - text: |-
       Posso te falar sobre os serviços oferecidos pelas secretarias da Prefeitura de Fortaleza: Acessar o Extrato do IPTU; 
-       Saber onde fica a ACM; 
+       Saber onde fica a AMC; 
        Explicar o que é Bolsa Família; 
        Lhe falar sobre o Recurso ao CETRAN.
        Qual o serviço do seu interesse?
